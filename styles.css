@@ -1,0 +1,40 @@
+body {
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    min-width: 490px;
+    margin: 0 auto;
+}
+
+.goods-container {
+    background-color: lightgreen;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 0 0 30px;
+    justify-content: space-around;
+}
+
+.good-picture {
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+}
+
+.good-card {
+    margin: 0 30px 30px 0;
+}
+
+.good-card > p {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .good-picture {
+        width: 150px;
+        height: 150px;
+        background-color: brown;
+    }
+}

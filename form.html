@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Калькулятор стоимости доставки</title>
+        <link href="form-styles.css" rel="stylesheet">
+        <script src="form-script.js"></script>
+    </head>
+    <body>
+        <h1>Калькулятор стоимости доставки</h1>
+        <form>
+            <label>
+                Расстояние, км:
+                <input type="number" id="distance">
+            </label>
+            <label>
+                Масса груза, кг:
+                <input type="number" id="weight">
+            </label>
+            <label>
+                Длина груза, мм:
+                <input type="number" id="length">
+            </label>
+            <div class="total">Общая стоимость: <span></span> руб.</div>
+            <div class="error"></div>
+            <div class="button-container">
+                <button id="calculateButton" type="button">Рассчитать</button>
+            </div>
+        </form>
+    </body>
+</html>
