@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let distance = document.querySelector("#distance").value;
             let weight = document.querySelector("#weight").value;
             let length = document.querySelector("#length").value;
+            let cost = document.querySelector("#cost").value;
 
             let errorText = '';
             
@@ -27,6 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (weight <= 0) {
                 errorText += 'Масса не указана<br>';
             }
+            if (cost <= 0) {
+                errorText += 'Стоимость груза не указана<br>';
+            }
 
             if (errorText) {
                 total.style.display = 'none';
@@ -36,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 error.style.display = 'none';
                 
                 let result = pricePerKm * distance +
-                    pricePerKg * weight;
+                    pricePerKg * weight + cost/1000;
                 totalCost.innerHTML = result;
 
                 total.style.display = 'block';
